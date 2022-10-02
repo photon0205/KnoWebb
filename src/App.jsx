@@ -5,6 +5,7 @@ import Home from "./pages/home/Home";
 import Slider from "./pages/slider/Slider";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
+import Order from "./pages/order/order";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/puzzle" element={<Puzzle />} />
           <Route path="/slider" element={<Slider />} />
+          <Route path="/order" element={<Order />} />
       </Routes>
     </Router>
   );
