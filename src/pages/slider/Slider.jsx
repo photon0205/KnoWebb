@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import hand from "../../assets/hand.png"
 import stripe from "../../assets/stripe.jpeg"
 import Blur from 'react-blur';
-
+import {Link} from 'react-router-dom'
 
 
 class Thing extends React.Component {
@@ -63,6 +63,7 @@ function Controls(props) {
   function move() {
     if (stop) {
       localStorage.setItem('slider_score',parseInt(10-Math.abs(this.props.left-700)/70))
+      <Link to="/">next challenge</Link>
     } else {
       if (left === 1400) {
         moving = 1;
