@@ -24,7 +24,6 @@ export default function Quiz() {
     } else {
       setShowScore(true);
       localStorage.setItem("quiz_score",score)
-      <Link to="/">next challenge</Link>
     }
   };
 
@@ -34,6 +33,7 @@ export default function Quiz() {
         <section className="showScore-section">
           <p>Your score is {score} out of {questions.length}</p>
           <p>So let the wavelength be {score/4}</p>
+          <Link to="/">next challenge</Link>
         </section>
       ) : (
         <>
