@@ -8,18 +8,41 @@ import { useState } from "react";
 export default function Puzzle() {
     const time = new Date();
     time.setSeconds(time.getSeconds() + 10);
-    console.log(time)
     const [stop, setStop] = useState(false);
     const [end, setEnd] = useState(false);
-    const {
-        seconds,
-        minutes,
-        pause
-      } = useTimer({ time, onExpire: () => onSolved()});
+    const [seconds, setSeconds] = useState(false);
+    const [minutes, setMinutes] = useState(false);
 
+    function MyTimer({ expiryTimestamp }) {
+
+        const {
+          seconds,
+          minutes,
+          isRunning,
+          start,
+          pause,
+        } = useTimer({ expiryTimestamp, onExpire: () => onTime() });
+
+        function onTime(){
+            setStop(true)
+            setEnd(true)
+            setSeconds(seconds)
+            setMinutes(minutes)
+            pause()
+        }
+      
+        return (
+          <div style={{textAlign: 'center'}}>
+            <div style={{fontSize: '20px'}}>
+              <span>{minutes}</span>:<span>{seconds}</span>
+            </div>
+          </div>
+        );
+      }
       function onSolved(){
+          setMinutes(minutes)
+          setSeconds(seconds)
           setStop(true)
-          setEnd(true)
       }
 
     return (
@@ -32,24 +55,18 @@ export default function Puzzle() {
                 <section className="showScore-section">
                 <div style={{textAlign: 'center'}}>
                     <div style={{fontSize: '20px'}}>
-                        You Took
-                        <span>{minutes}</span>:<span>{seconds}</span> much Time!!
+                    You Took <span>{minutes}</span>:<span>{seconds}</span> Time!!!
                     </div>
                 </div>
                 </section>
             )
         ):(
-            <>
-            <div style={{textAlign: 'center'}}>
-            <div style={{fontSize: '20px'}}>
-              <span>{minutes}</span>:<span>{seconds}</span>
-            </div>
-          </div>,
+            <><MyTimer expiryTimestamp={time} />,
             <JigsawPuzzle
             imageSrc='https://images.ctfassets.net/yadj1kx9rmg0/wtrHxeu3zEoEce2MokCSi/cf6f68efdcf625fdc060607df0f3baef/quwowooybuqbl6ntboz3.jpg'
-            rows={3}
-            columns={3}
-            onSolved={() => alert('Solved!')}
+            rows={2}
+            columns={2}
+            onSolved={() => onSolved()}
             className="jigsaw-puzzle" /></>
         )}
         </div>
