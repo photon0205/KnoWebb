@@ -47,7 +47,7 @@ useEffect(() =>{
           scor= scor>10?10:scor;
           scor = Math.floor(scor);
           setScore(scor)
-          localStorage.setItem('puzzle_score',score)
+          localStorage.setItem('puzzle_score',5)
           setStop(true)
       }
 
@@ -78,8 +78,8 @@ useEffect(() =>{
                 </section>,
             <JigsawPuzzle
             imageSrc={imgList[rand]}
-            rows={3}
-            columns={3}
+            rows={2}
+            columns={1}
             onSolved={() => onSolved()}
             className="jigsaw-puzzle" /></>
         )}

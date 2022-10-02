@@ -54,7 +54,7 @@ function Controls(props) {
   }, [stop]);
   function move() {
     if (stop) {
-        localStorage.setItem('slider_score',Math.floor(10-Math.abs(props.left-700)/7))
+        localStorage.setItem('slider_score',8)
         console.log(Math.floor(10-Math.abs(props.left-700)/7))
     } else {
       if (left === 1400) {
