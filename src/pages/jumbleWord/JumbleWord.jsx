@@ -18,6 +18,9 @@ const JumbleWord = () => {
             setList(list);
             setMoves(word.length + 5);
         }
+        else {
+            localStorage.setItem("jumbleword_score")
+        }
     }, [games])
 
     const handleOnDragEnd = (result) => {

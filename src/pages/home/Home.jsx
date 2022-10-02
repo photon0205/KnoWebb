@@ -74,7 +74,7 @@ const Home = () => {
                     {steps.map((step,index) => {
                         return (<Step key={step.label}>
                             <StepLabel>{step.label}</StepLabel>
-                            <StepContent><small className='d-block'>{`Score ${scores[index]===-1?0:scores[index]}`}</small><small>{step.description}</small>
+                            <StepContent><small>{step.description}</small>
                                 <Link className="link" to={step.path}>Play</Link>
                             </StepContent>
                         </Step>)
