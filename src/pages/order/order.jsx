@@ -92,7 +92,7 @@ const Order = () => {
         {done?
         <div className='score'>
         {score}
-        <Link className="link" to="/">Results</Link>
+        <Link className="link" to="/result">Results</Link>
         </div>:
         <div className='game'>
             <div className="heading">Set the Images of the Telescope in the right order</div>

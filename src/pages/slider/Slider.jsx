@@ -4,7 +4,8 @@ import hand from "../../assets/hand.png"
 import stripe from "../../assets/stripe.jpeg"
 import jwst from "../../assets/jwst.jpeg"
 import Blur from 'react-blur';
-import (Link} from 'react-router-dom'
+import "./Slider.css";
+import {Link} from 'react-router-dom'
 
 class Thing extends React.Component {
   render() {
@@ -23,14 +24,14 @@ class Thing extends React.Component {
                 marginTop: "80px",
             }}
         >
-         <img src={stripe} height="20px" width="1420px" />
+         <img src={stripe} className="stripe" />
         </div><div
             style={{
                 marginLeft: this.props.left + "px",
                 marginTop: "10px",
             }}
         >
-                <img src={hand} height="40px" width="40px" />
+                <img src={hand} className="hand" />
             </div><div style={{textAlign: 'center'}}>
             <div style={{fontSize: '20px'}}>
               You are {Math.floor(100-Math.abs(this.props.left-700)/7)}% accurate
@@ -53,7 +54,8 @@ function Controls(props) {
   }, [stop]);
   function move() {
     if (stop) {
-        localStorage.setItem('slider_score',parseInt(10-Math.abs(this.props.left-700)/7))
+        localStorage.setItem('slider_score',Math.floor(10-Math.abs(props.left-700)/7))
+        console.log(Math.floor(10-Math.abs(props.left-700)/7))
     } else {
       if (left === 1400) {
         moving = 1;
