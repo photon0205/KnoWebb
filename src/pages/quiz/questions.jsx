@@ -20,21 +20,30 @@ export const questions = [
   {
     questionText: "What was its position in january 2022?",
     answerOptions: [
-      { answerText: "", isCorrect: true },
-      { answerText: "", isCorrect: false },
-      { answerText: "", isCorrect: false },
-      { answerText: "", isCorrect: false },
+      { answerText: "Sun–Earth L2 Lagrange point", isCorrect: true },
+      { answerText: "earth-jupiter L1 lagrange point", isCorrect: false },
+      { answerText: "between mars -saturn", isCorrect: false },
+      { answerText: "beyond neptune", isCorrect: false },
+    ],
     },
   {
-      questionText: "",
+      questionText: "When was the The first image from JWST was released to the public ",
       answerOptions: [
-        { answerText: "", isCorrect: true },
-        { answerText: "", isCorrect: false },
-        { answerText: "", isCorrect: false },
-        { answerText: "", isCorrect: false },
+        { answerText: "11 july 2022", isCorrect: true },
+        { answerText: "10 july 2020", isCorrect: false },
+        { answerText: "10 may 2019", isCorrect: false },
+        { answerText: "10 may 2020", isCorrect: false },
       ],
   },
-  
+  {
+    questionText: "What was the name earliee of JWST?",
+    answerOptions: [
+      { answerText: "Next generation spave telescope(1996)", isCorrect: true },
+      { answerText: "Next world telescope", isCorrect: false },
+      { answerText: "View world telescope ", isCorrect: false },
+      { answerText: "Cosmic telescope", isCorrect: false },
+    ],
+  },
 ];
 
 
