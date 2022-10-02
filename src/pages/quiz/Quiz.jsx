@@ -4,7 +4,8 @@ import { questions } from "./questions";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Quiz() {
+export default function Quiz({setScore1}) {
+
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
@@ -21,6 +22,7 @@ export default function Quiz() {
       setCurrentQuestion(nextQuestion);
     } else {
       setShowScore(true);
+      setScore1(score)
     }
   };
 

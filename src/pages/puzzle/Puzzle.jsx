@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export default function Puzzle() {
     const time = new Date();
-    time.setSeconds(time.getSeconds() + 10);
+    time.setSeconds(time.getSeconds() + 100);
     const [stop, setStop] = useState(false);
     const [end, setEnd] = useState(false);
     const [seconds, setSeconds] = useState(false);
@@ -30,7 +30,7 @@ export default function Puzzle() {
             setMinutes(minutes)
             pause()
         }
-      
+        
         return (
           <div style={{textAlign: 'center'}}>
             <div style={{fontSize: '20px'}}>
@@ -52,7 +52,7 @@ export default function Puzzle() {
                 <p>Your Time's Up!!</p>
                 </section>
             ):(
-                <section className="showScore-section">
+                <section >
                 <div style={{textAlign: 'center'}}>
                     <div style={{fontSize: '20px'}}>
                     You Took <span>{minutes}</span>:<span>{seconds}</span> Time!!!
@@ -63,9 +63,10 @@ export default function Puzzle() {
         ):(
             <><MyTimer expiryTimestamp={time} />,
             <JigsawPuzzle
-            imageSrc='https://images.ctfassets.net/yadj1kx9rmg0/wtrHxeu3zEoEce2MokCSi/cf6f68efdcf625fdc060607df0f3baef/quwowooybuqbl6ntboz3.jpg'
-            rows={2}
-            columns={2}
+            imageSrc="https://firebasestorage.googleapis.com/v0/b/nasa-hackathon-50da5.appspot.com/o/image5.jpg?alt=media&token=018c090c-d309-46ea-bcc2-ffb127c9f5e2"
+            rows={1}
+            columns={6}
+             
             onSolved={() => onSolved()}
             className="jigsaw-puzzle" /></>
         )}

@@ -1,26 +1,42 @@
 import React, { Component } from "react";
 import { useState, useEffect } from "react";
-import { useTimer } from "react-timer-hook";
 import hand from "../../assets/hand.png"
 import stripe from "../../assets/stripe.jpeg"
+import jwst from "../../assets/jwst.jpeg"
+import Blur from 'react-blur';
+
+
 
 class Thing extends React.Component {
   render() {
     return (
-        <><div
+        <>
+        <div
             style={{
                 marginTop: "80px",
             }}
         >
-         <img src={stripe} height="40px" width="1420px" />
+         <Blur img={jwst} blurRadius={this.props.radius} enableStyles>
+         <p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p>
+         </Blur>
+        </div><div
+            style={{
+                marginTop: "80px",
+            }}
+        >
+         <img src={stripe} height="20px" width="1420px" />
         </div><div
             style={{
                 marginLeft: this.props.left + "px",
-                marginTop: "100px",
+                marginTop: "10px",
             }}
         >
                 <img src={hand} height="40px" width="40px" />
-            </div></>
+            </div><div style={{textAlign: 'center'}}>
+            <div style={{fontSize: '20px'}}>
+              You are {parseInt(100-Math.abs(this.props.left-700)/7)}% accurate
+            </div>
+          </div></>
     );
   }
 }
@@ -32,13 +48,11 @@ function Controls(props) {
   useEffect(() => {
     const interval = setInterval(() => {
       move();
-    }, 50);
+    }, 1);
     return () => clearInterval(interval);
-  }, []);
+  }, [stop]);
   function move() {
-      console.log(stop)
     if (stop) {
-      console.log(left);
     } else {
       if (left === 1400) {
         moving = 1;
@@ -54,15 +68,12 @@ function Controls(props) {
       }
     }
   }
-  return (
-    <section className="showScore-section">
-    <div style={{textAlign: 'center'}}>
-        <div style={{fontSize: '20px'}}>
-        <button onClick={()=>{setStop(true);console.log(stop)}}>Stop</button>
-        </div>
-    </div>
-    </section>
-  );
+  onkeypress = (event) =>{
+    console.log(event)
+    if(event.key===" "){
+        setStop(true)
+    }
+}
   }
 
 export default class Slider extends React.Component {
@@ -82,7 +93,7 @@ export default class Slider extends React.Component {
   render() {
     return (
       <div>
-        <Thing left={this.state.left} top={this.state.top} />
+        <Thing left={this.state.left} top={this.state.top} radius= {Math.abs(this.state.left/10-70)}/>
         <Controls
           move={(x) => this.move(x)}
           left={this.state.left}
