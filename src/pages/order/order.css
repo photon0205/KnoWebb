@@ -1,0 +1,103 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.order_view{
+    position: absolute;
+    left: 150px;
+    /* right: 50%; */
+    top: 60px;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 20%;
+    background: coral;
+}
+.order-1{
+    border: 2px solid;
+    position: relative;
+    left: 0px;
+    height: 100%;
+    width: 16.66%;
+    background-color: rgb(146, 141, 141);
+}
+.order-2{
+    border: 2px solid;
+    position: relative;
+    left: 0px;
+    height: 100%;
+    width: 16.66%;
+    background-color: rgb(146, 141, 141);
+}
+.order-3{
+    border: 2px solid;
+    position: relative;
+    left: 0px;
+    height: 100%;
+    width: 16.66%;
+    background-color: rgb(146, 141, 141);
+}
+.order-4{
+    border: 2px solid;
+    position: relative;
+    left: 0px;
+    height: 100%;
+    width: 16.66%;
+    background-color: rgb(146, 141, 141);
+}
+.order-5{
+    border: 2px solid;
+    position: relative;
+    left: 0px;
+    height: 100%;
+    width: 16.66%;
+    background-color: rgb(146, 141, 141);
+}
+.order-6{
+    border: 2px solid;
+    position: relative;
+    left: 0px;
+    height: 100%;
+    width: 16.66%;
+    background-color: rgb(146, 141, 141);
+}
+
+.shuffle_images{
+    position: absolute;
+    left: 450px;
+    bottom: 100px;
+    height: 100px;
+    width: 600px;
+    background-color: chocolate;
+    display: flex;
+    flex-direction: row;
+}
+.shufImg{
+    height: 100px;
+    width: 100px;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+.timer{
+    position: absolute;
+    left: 750px;
+    font-size: 20px;
+    color: burlywood;
+}
+.heading{
+    font-size: 20px;
+    color: burlywood;
+}
+.score{
+    position: relative;
+    top: 50px;
+    font-size: 25px;
+    color: rgb(170, 153, 127);
+}
+.link{
+    position: relative;
+    right: 20px;
+}
