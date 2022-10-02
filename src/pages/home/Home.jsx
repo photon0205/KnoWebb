@@ -3,34 +3,38 @@ import { Link } from 'react-router-dom'
 import "./home.css"
 import { Stepper, Step, StepLabel, StepContent } from '@material-ui/core'
 import { useState } from 'react'
-// localStorage.setItem("quiz_score","");
-//         localStorage.setItem("jumbleword_score","");
-//         localStorage.setItem("puzzle_score","");
-//         localStorage.setItem("order_score","");
-//         localStorage.setItem("slider_score","");
+
 const Home = () => {
     const [activeStep, setActiveStep] = useState(0);
-    const [scores,setScores] = useState([]);
-
     const nextStep = (index) => {
         setActiveStep(index)
     }
 
-    useState(()=>{
-        const score1 = localStorage.getItem("quiz_score") || -1 ;
-        const score2 = localStorage.getItem("puzzle_score") || -1 ;
-        const score3 = localStorage.getItem("slider_score") || -1 ;
-        const score4 = localStorage.getItem("jumbleword_score") || -1 ;
-        const score5 = localStorage.getItem("order_score") || -1 ;
-        const arr = [score1,score2,score3,score4,score5];
+    const reset = () => {
+        localStorage.setItem("quiz_score", "");
+        localStorage.setItem("jumbleword_score", "");
+        localStorage.setItem("puzzle_score", "");
+        localStorage.setItem("order_score", "");
+        localStorage.setItem("slider_score", "");
+        setActiveStep(0);
+    }
 
-        for(let i=0;i<5;i++){
-            if(arr[i]!==-1){
-                nextStep(i+1)
+    useState(() => {
+        const score1 = localStorage.getItem("quiz_score") || -1;
+        const score2 = localStorage.getItem("puzzle_score") || -1;
+        const score3 = localStorage.getItem("slider_score") || -1;
+        const score4 = localStorage.getItem("jumbleword_score") || -1;
+        const score5 = localStorage.getItem("order_score") || -1;
+        const arr = [score1, score2, score3, score4, score5];
+
+        let cont = true;
+        for (let i = 4; i >=0; i--) {
+            if (arr[i] !== -1&&cont) {
+                nextStep(i + 1)
+                cont = false
             }
         }
-        setScores(arr);
-    },[])
+    }, [])
 
     const steps = [
         {
@@ -46,7 +50,7 @@ const Home = () => {
             label: 'Puzzle',
             description:
                 'Align the blocks so that it forms the perfect image! To get the NIRISS instrument ',
-                
+
             path: "/puzzle"
         },
         {
@@ -71,7 +75,7 @@ const Home = () => {
             <h1 className="gamename my-4 alignIt">KnoWebb</h1>
             <div className="stepper my-4">
                 <Stepper alternativeLabel activeStep={activeStep}>
-                    {steps.map((step,index) => {
+                    {steps.map((step, index) => {
                         return (<Step key={step.label}>
                             <StepLabel>{step.label}</StepLabel>
                             <StepContent><small>{step.description}</small>
@@ -81,6 +85,7 @@ const Home = () => {
                     })}
                 </Stepper>
             </div>
+            <button className='mx-4' onClick={reset}>Reset</button>
         </>
     )
 }

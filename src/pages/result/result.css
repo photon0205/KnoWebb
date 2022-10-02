@@ -41,4 +41,6 @@
     display: block;
     margin: 3px;
     color: rgb(139, 171, 0);
+    justify-content: center;
+    text-align: center;
 }

@@ -1,6 +1,7 @@
 import {gettheImages} from "../../services/remote/firebase_services";
 import React, { useEffect, useState } from "react";
 import './result.css'
+import { useNavigate } from "react-router-dom";
 
 const scores = [localStorage.getItem("quiz_score"),localStorage.getItem("puzzle_score"),localStorage.getItem("slider_score"),localStorage.getItem("jumbleword_score"),localStorage.getItem("order_score")
 ];
@@ -10,7 +11,7 @@ export default function Result() {
     const instrument = ["MIRI", "NIRISS", "NIRCam", "NIRSpec", "FGS"];
     const [srcArray, setSrcArray] = useState([]);
     const [load, setLoad] = useState(true);
-
+    const navigate = useNavigate();
     useEffect(() => {
         var urls= [];
         console.log(scores);
@@ -34,6 +35,7 @@ export default function Result() {
         localStorage.setItem("puzzle_score","");
         localStorage.setItem("order_score","");
         localStorage.setItem("slider_score","");
+        navigate("/")
     }
     return (
         <>
