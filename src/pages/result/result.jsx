@@ -1,10 +1,9 @@
 import {gettheImages} from "../../services/remote/firebase_services";
 import React, { useEffect, useState } from "react";
 import './result.css'
+
 const scores = [localStorage.getItem("quiz_score"),localStorage.getItem("puzzle_score"),localStorage.getItem("slider_score"),localStorage.getItem("jumbleword_score"),localStorage.getItem("order_score")
 ];
-
-
 let final_score = 0;
 for(let i=0;i<5;i++) final_score+=parseInt(scores[i]);
 export default function Result() {
@@ -14,6 +13,7 @@ export default function Result() {
 
     useEffect(() => {
         var urls= [];
+        console.log(scores);
        const func=async()=>{ 
          for (let i = 0; i < 5; i++) {
         const url = await gettheImages(scores[i], instrument[i])
@@ -22,8 +22,6 @@ export default function Result() {
                {
                 setSrcArray(urls);
                 setLoad(false);
-                console.log(urls);
-                console.log(srcArray);
              }
         }
      }

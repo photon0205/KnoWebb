@@ -53,7 +53,7 @@ const Order = () => {
                         scor = scor>10?10:scor;
                         scor = Math.floor( scor );
                         setscore(scor);
-                        localStorage.setItem("order_score",score)
+                        localStorage.setItem("order_score",9)
                         console.log(score);
                         setdone(true);
                     }else{
@@ -92,7 +92,7 @@ const Order = () => {
         {done?
         <div className='score'>
         {score}
-        <Link className="link" to="/">Results</Link>
+        <a className="link" href="/result"> Results</a>
         </div>:
         <div className='game'>
             <div className="heading">Set the Images of the Telescope in the right order</div>

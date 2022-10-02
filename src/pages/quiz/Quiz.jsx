@@ -32,7 +32,6 @@ export default function Quiz() {
       {showScore ? (
         <section className="showScore-section">
           <p>Your score is {score} out of {questions.length}</p>
-          <p>So let the wavelength be {score/4}</p>
           <Link to="/">next challenge</Link>
         </section>
       ) : (
