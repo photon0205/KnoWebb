@@ -4,7 +4,7 @@ import hand from "../../assets/hand.png"
 import stripe from "../../assets/stripe.jpeg"
 import jwst from "../../assets/jwst.jpeg"
 import Blur from 'react-blur';
-import (Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 class Thing extends React.Component {
   render() {
