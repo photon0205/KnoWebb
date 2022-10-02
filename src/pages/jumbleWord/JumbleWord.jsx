@@ -26,7 +26,7 @@ const JumbleWord = () => {
         setList(items);
         setMoves(moves - 1);
         if (moves - 1 === 0 && !correct) setGames(games - 1);
-        if (correct) { setScore(score + 1); setGames(games - 1); }
+        if (correct) { setScore(score + 2); setGames(games - 1); }
     }
 
     return (

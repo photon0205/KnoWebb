@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# KnoWebb
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> Play our amazing challenges to obtain the parts of the JAMES WEBB SPACE TELESCOPE and capture the best possible images using them!
 
-## Available Scripts
+These Challenges will help you in learning about  James Webb Space Telescope
 
-In the project directory, you can run:
 
-### `npm start`
+# Challenges  
+We have made a total of 5 challenges that the player will have to pass for obtaining all the instruments of the telescope
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> ### Quiz  
+For the MIRI instrument, the player will need to answer our quiz questions about the James Webb Telescope and try their best to obtain the full score!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+`The better you score, the more precise will your MIRI instrument will be in capturing your photos!!`
 
-### `npm test`
+> ### Puzzle   
+In this challenge the player will be required to solve a jigsaw puzzle of one of the images clicked by the James Webb Telescope in the least amount of time, in order to obtain the NIRISS instrument!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`The better you perform the better your instrument will perform!!`
 
-### `npm run build`
+> ### Focus  
+For the NIRCam instrument, we bring to you a focusing game, in which you focus a picture clicked by the James Webb Space Telescope using a slider and your accuracy determines the precision of the NIRCam instrument you will obtain!
+`Say you are 100% accurate, you will be awarded by the ideal NIRCam with no defects!!`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> ### Jumbled Words  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In this challenge, one needs to unscramble the jumbled words (which are all related to the James Webb Space Telescope ) in minimum moves to obtain the NIRSpec instrument!  
+  
+`The number of moves decides the accuracy of the NIRSpec instrument` 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> ### Order 
 
-### `npm run eject`
+User will be given 5 images which they will have to put in order of which element of the telescope optical parts will the infrared light will pass through
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+`Time taken in this challenge will decide the accuracy of the FGS instrument!`  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Result  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Its the final result of our game! All the instruments you have procured create 5 images and this page shows how well you performed showing how the images you created were different from the ideal images!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ALL THE BEST
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+HOPE YOU ENJOY THE GAME
+  
