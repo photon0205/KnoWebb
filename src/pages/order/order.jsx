@@ -7,8 +7,6 @@ import c from '../../assets/order/3.jpg';
 import d from '../../assets/order/4.jpg';
 import e from '../../assets/order/5.jpg';
 import f from '../../assets/order/6.jpg';
-import { useTimer } from 'react-timer-hook';
-import Timer from '../../components/Timer';
 
 const Order = () => {
     const [done, setdone] = useState(false)

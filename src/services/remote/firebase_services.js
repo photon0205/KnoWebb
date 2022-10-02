@@ -21,12 +21,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 
-function gettheImages(score, typeOfInstrument){
+async function gettheImages(score, typeOfInstrument){
     const storage = getStorage();
-    getDownloadURL(ref(storage, typeOfInstrument+'$'+score+'.jpeg'))
-    .then((url) => {
-        //TODO:fetch the images from here 
-    })     
+    const url = await getDownloadURL(ref(storage, typeOfInstrument+'$'+score+'.jpeg'))
+    return url;
 }
 
-
+export {gettheImages}

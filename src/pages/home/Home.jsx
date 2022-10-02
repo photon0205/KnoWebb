@@ -3,10 +3,15 @@ import { Link } from 'react-router-dom'
 import "./home.css"
 import { Stepper, Step, StepLabel, StepContent } from '@material-ui/core'
 import { useState } from 'react'
-
+// localStorage.setItem("quiz_score","");
+//         localStorage.setItem("jumbleword_score","");
+//         localStorage.setItem("puzzle_score","");
+//         localStorage.setItem("order_score","");
+//         localStorage.setItem("slider_score","");
 const Home = () => {
     const [activeStep, setActiveStep] = useState(0);
     const [scores,setScores] = useState([]);
+
     const nextStep = (index) => {
         setActiveStep(index)
     }
@@ -17,16 +22,14 @@ const Home = () => {
         const score3 = localStorage.getItem("slider_score") || -1 ;
         const score4 = localStorage.getItem("jumbleword_score") || -1 ;
         const score5 = localStorage.getItem("order_score") || -1 ;
-
         const arr = [score1,score2,score3,score4,score5];
-        setScores(arr);
+
         for(let i=0;i<5;i++){
-            if(arr[i]===-1){
-                if(i!==0) {nextStep(i-1);
-                    break;
-                }
+            if(arr[i]!==-1){
+                nextStep(i+1)
             }
         }
+        setScores(arr);
     },[])
 
     const steps = [
@@ -71,13 +74,13 @@ const Home = () => {
 
     return (
         <>
-            <h1 className="gamename my-4 alignIt">NoWebb</h1>
+            <h1 className="gamename my-4 alignIt">KnoWebb</h1>
             <div className="stepper my-4">
                 <Stepper alternativeLabel activeStep={activeStep}>
                     {steps.map((step,index) => {
                         return (<Step key={step.label}>
                             <StepLabel>{step.label}</StepLabel>
-                            <StepContent><small className='d-block'>{`Score ${scores[index]}`}</small><small>{step.description}</small>
+                            <StepContent><small className='d-block'>{`Score ${scores[index]===-1?0:scores[index]}`}</small><small>{step.description}</small>
                                 <Link className="link" to={step.path}>Play</Link>
                             </StepContent>
                         </Step>)

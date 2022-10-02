@@ -1,4 +1,4 @@
-import gettheImages from "../../services/remote/firebase_services";
+import {gettheImages} from "../../services/remote/firebase_services";
 import React, { useEffect, useState } from "react";
 import './result.css'
 const scores = [localStorage.getItem("quiz_score"),localStorage.getItem("puzzle_score"),localStorage.getItem("slider_score"),localStorage.getItem("jumbleword_score"),localStorage.getItem("order_score")
@@ -32,6 +32,10 @@ export default function Result() {
 
     const reset=()=>{
         localStorage.setItem("quiz_score","");
+        localStorage.setItem("jumbleword_score","");
+        localStorage.setItem("puzzle_score","");
+        localStorage.setItem("order_score","");
+        localStorage.setItem("slider_score","");
     }
     return (
         <>

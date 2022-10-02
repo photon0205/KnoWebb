@@ -7,7 +7,8 @@ import Blur from 'react-blur';
 
 
 class Thing extends React.Component {
-   imgList = ['https://firebasestorage.googleapis.com/v0/b/nasa-hackathon-50da5.appspot.com/o/spaceimg%2Fgsfc_20171208_archive_e000226_orig.jpg?alt=media&token=10e37a81-5bbf-4958-8b41-9351aa641152',
+  render() {
+  const imgList = ['https://firebasestorage.googleapis.com/v0/b/nasa-hackathon-50da5.appspot.com/o/spaceimg%2Fgsfc_20171208_archive_e000226_orig.jpg?alt=media&token=10e37a81-5bbf-4958-8b41-9351aa641152',
   'https://firebasestorage.googleapis.com/v0/b/nasa-hackathon-50da5.appspot.com/o/spaceimg%2Fhubble.jpg?alt=media&token=de1c630e-143b-4370-9fd8-6e1a58cdd7da',
   'https://firebasestorage.googleapis.com/v0/b/nasa-hackathon-50da5.appspot.com/o/spaceimg%2Fhubble2.jpg?alt=media&token=b95b71a1-3683-43af-976c-2b75a9bf36a1',
   'https://firebasestorage.googleapis.com/v0/b/nasa-hackathon-50da5.appspot.com/o/spaceimg%2Fhubble_iras055062414_potw2238a.jpg?alt=media&token=a163b8d1-184e-4db2-9007-4b2e72c0bde5',
@@ -17,7 +18,6 @@ class Thing extends React.Component {
   'https://firebasestorage.googleapis.com/v0/b/nasa-hackathon-50da5.appspot.com/o/spaceimg%2Fss3.jpg?alt=media&token=5d05ca25-5754-4672-a748-a2cf8668615e',
   'https://firebasestorage.googleapis.com/v0/b/nasa-hackathon-50da5.appspot.com/o/spaceimg%2Fss5.jpg?alt=media&token=685fdd03-4e9d-4614-9d17-524b58cfd19b'
   ];
-  render() {
     return (
         <>
         <div
