@@ -62,6 +62,7 @@ function Controls(props) {
   }, [stop]);
   function move() {
     if (stop) {
+      localStorage.setItem('slider_score',parseInt(10-Math.abs(this.props.left-700)/70))
     } else {
       if (left === 1400) {
         moving = 1;
