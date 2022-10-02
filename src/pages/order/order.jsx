@@ -55,6 +55,7 @@ const Order = () => {
                         scor = scor>10?10:scor;
                         scor = Math.floor( scor );
                         setscore(scor);
+                        localStorage.setItem("order_score",score)
                         console.log(score);
                         setdone(true);
                     }else{

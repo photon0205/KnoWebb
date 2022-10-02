@@ -54,6 +54,7 @@ export default function Puzzle() {
           setMinutes(minutes)
           setSeconds(seconds)
           setStop(true)
+          localStorage.setItem("puzzle_score",8);
       }
 
     return (
