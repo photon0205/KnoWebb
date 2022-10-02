@@ -3,6 +3,7 @@ import "./quiz.css";
 import { questions } from "./questions";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {Link} from 'react-router-dom'
 
 export default function Quiz() {
 
@@ -23,6 +24,7 @@ export default function Quiz() {
     } else {
       setShowScore(true);
       localStorage.setItem("quiz_score",score)
+      <Link to="/">next challenge</Link>
     }
   };
 
