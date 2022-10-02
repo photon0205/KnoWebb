@@ -1,0 +1,25 @@
+.link{
+    text-decoration: none !important;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    margin: 4px;
+}
+
+.link:hover{
+    color: rgb(0, 0, 0);
+}
+
+.stepper{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid black;
+    width: 90%;
+    margin : auto;
+}
+
+.gamename{
+    color: rgba(0, 0, 0, 0.763);
+    font-family: cursive;
+}
