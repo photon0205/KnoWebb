@@ -1,40 +1,40 @@
 export const questions = [
   {
-    questionText: "What is the capital of France?",
+    questionText: "When The James Webb Space Telescope was launched?",
     answerOptions: [
-      { answerText: "New York", isCorrect: false },
-      { answerText: "London", isCorrect: false },
-      { answerText: "Paris", isCorrect: true },
-      { answerText: "Dublin", isCorrect: false },
+      { answerText: "25 December 2021", isCorrect: true },
+      { answerText: "13 november 2019", isCorrect: false },
+      { answerText: "2 march 2016", isCorrect: false },
+      { answerText: "7 may 2018", isCorrect: false },
     ],
   },
   {
-    questionText: "Who is CEO of Tesla?",
+    questionText: "Where was webb launched  from ?",
     answerOptions: [
-      { answerText: "Jeff Bezos", isCorrect: false },
-      { answerText: "Elon Musk", isCorrect: true },
-      { answerText: "Bill Gates", isCorrect: false },
-      { answerText: "Tony Stark", isCorrect: false },
+      { answerText: "Kourou, French Guiana", isCorrect: true },
+      { answerText: "Somogy County, Hungary", isCorrect: false },
+      { answerText: "Worcestershire, England", isCorrect: false },
+      { answerText: "Nuuk, Greenland", isCorrect: false },
     ],
   },
   {
-    questionText: "The iPhone was created by which company?",
+    questionText: "What was its position in january 2022?",
     answerOptions: [
-      { answerText: "Apple", isCorrect: true },
-      { answerText: "Intel", isCorrect: false },
-      { answerText: "Amazon", isCorrect: false },
-      { answerText: "Microsoft", isCorrect: false },
-    ],
-  },
+      { answerText: "", isCorrect: true },
+      { answerText: "", isCorrect: false },
+      { answerText: "", isCorrect: false },
+      { answerText: "", isCorrect: false },
+    },
   {
-    questionText: "How many Harry Potter books are there?",
-    answerOptions: [
-      { answerText: "1", isCorrect: false },
-      { answerText: "4", isCorrect: false },
-      { answerText: "6", isCorrect: false },
-      { answerText: "7", isCorrect: true },
-    ],
+      questionText: "",
+      answerOptions: [
+        { answerText: "", isCorrect: true },
+        { answerText: "", isCorrect: false },
+        { answerText: "", isCorrect: false },
+        { answerText: "", isCorrect: false },
+      ],
   },
+  
 ];
 
 
