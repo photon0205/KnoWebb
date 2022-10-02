@@ -1,8 +1,7 @@
 // This js file contain functions for Jumble Word game
 import nextId from "react-id-generator";
 
-const words = ["Telescope", "Spacex", "Sunshield", "Lens", "Engine", "Rocket", "Fuel", "NASA",
-    "Stars", "Universe"]
+const words =["Infrared", "Spectroscopy", "Coronagraphy", "Altimeter", "Exoplanet", "Imaging", "Amalthea", "Adrastea", "Cartwheel", "Wavelength", "Micrometeoroids", "Sunshield", "Actuators", "Curvature", "Cryogenic", "Anastigmat", "Beryllium", "Hexagonal", "Kapton", "Deployment", "NIRCam", "Microshutter", "Telescope"] 
 
 // JUmbling the words 
 for (let i = 0; i < words.length; i++) {

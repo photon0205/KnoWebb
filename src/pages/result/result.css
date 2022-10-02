@@ -1,0 +1,44 @@
+.row {
+    display: flex;
+}
+
+.parent {
+    display: flex;
+    align-items: center;
+   justify-content: center;
+    width: 1260px;
+    height: 500px;
+    left: 100px;
+    right: 200px;
+}
+.image {
+    width: 100%;
+    height: auto;
+    margin: 3px;
+}
+
+.column {
+    width: 100%;
+    height: auto;
+}
+.column img{
+    width: 100%;
+    height: auto;
+}
+.text {
+    text-align: center;
+    color: white;
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer{
+    display: block;
+    margin: 3px;
+    color: rgb(139, 171, 0);
+}
