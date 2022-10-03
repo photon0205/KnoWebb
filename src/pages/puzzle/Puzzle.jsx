@@ -78,8 +78,8 @@ useEffect(() =>{
                 </section>,
             <JigsawPuzzle
             imageSrc={imgList[rand]}
-            rows={2}
-            columns={1}
+            rows={3}
+            columns={2}
             onSolved={() => onSolved()}
             className="jigsaw-puzzle" /></>
         )}

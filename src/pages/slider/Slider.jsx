@@ -35,7 +35,7 @@ class Thing extends React.Component {
             </div><div style={{textAlign: 'center'}}>
             <div style={{fontSize: '20px'}}>
               You are {Math.floor(100-Math.abs(this.props.left-700)/7)}% accurate
-            <Link to="/"> Next Challenge </Link>
+            <p><Link to="/"> Next Challenge </Link></p>
             </div>
           </div></>
     );
@@ -54,8 +54,8 @@ function Controls(props) {
   }, [stop]);
   function move() {
     if (stop) {
-        localStorage.setItem('slider_score',8)
-        console.log(Math.floor(10-Math.abs(props.left-700)/7))
+        localStorage.setItem('slider_score',Math.floor((Math.floor(100-Math.abs(props.left-700)/7))/10))
+        
     } else {
       if (left === 1400) {
         moving = 1;
@@ -72,7 +72,7 @@ function Controls(props) {
     }
   }
   onkeypress = (event) =>{
-    console.log(event)
+    
     if(event.key===" "){
         setStop(true)
     }
