@@ -103,10 +103,10 @@ const Order = () => {
       {done ? (
         <div className="score">
           {score}
-          <a className="link" href="/result">
+          <Link className="link" to="/result">
             {" "}
             Results
-          </a>
+          </Link>
         </div>
       ) : (
         <div className="game">
